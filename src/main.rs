@@ -1,5 +1,5 @@
-use rand::prelude::*;
+use rand::{rng, Rng};
 fn main() {
-    let mut x: u8 = rand::random();
-    println!("Hello, world! {x} and now the real test.");
+    let x: u8 = rand::thread_rng().gen_range(1..143);
+    println!("Hello Neighbor, read the poem on page {x}");
 }
